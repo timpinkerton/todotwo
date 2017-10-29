@@ -19,7 +19,8 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^$', include('todoapp.urls')),
+    # This is the route for the index and is the same the route below
+    url(r'^', include('todoapp.urls')),
     # This is the route for the todoapp
     url(r'^todoapp/', include('todoapp.urls')),
     url(r'^admin/', admin.site.urls),
