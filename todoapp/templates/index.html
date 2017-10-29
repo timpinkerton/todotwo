@@ -1,1 +1,8 @@
-hello from {{ todoapp }}
+{% include 'partials/header.html' %}
+        <ul>
+            {% for todo in todoapp %}
+                <li><a href="/todoapp/details/{{todo.id}}">{{todo.title}}</a></li>
+            {% endfor %}
+        </ul>
+
+{% include 'partials/footer.html' %}

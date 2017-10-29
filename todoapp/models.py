@@ -10,6 +10,6 @@ class Todo(models.Model):
     text = models.TextField()
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     
-    # This will return the title given above
+    # This will return the Todo.title from the class above
     def __str__(self):
         return self.title
