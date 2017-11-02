@@ -25,6 +25,15 @@ def details(request, id):
     }
     return render(request, 'details.html', context) 
 
+def edit(request, id):
+            # This will get a Todo object using the id
+    todo = Todo.objects.get(id=id)
+
+    context = {
+        'todo': todo
+    }
+    return render(request, 'edit.html', context) 
+
 def add(request):
     # This will test if this is a POST request
     if(request.method == "POST"):
