@@ -64,3 +64,16 @@ def add(request):
     else: 
         return render(request, 'add.html') 
     
+
+def delete(request, id):
+    if(request.method == "POST"):
+        todo = Todo.objects.get(id=id)
+
+        todo.delete()
+        return redirect('/todoapp')
+    else:
+        todo = Todo.objects.get(id=id)
+        context = {
+            'todo': todo
+        }
+        return render(request, 'delete.html', context) 
