@@ -28,11 +28,13 @@ def details(request, id):
 def edit(request, id):
     # This will test if this is a POST request
     if(request.method == "POST"):
-        todo = Todo.objects.put(id=id)
+        todo = Todo.objects.get(id=id)
 
         title = request.POST['title']
         text = request.POST['text']
-        todo = Todo(title=title, text=text)
+        # This will replace the title and text with the new info
+        todo.title = title
+        todo.text = text
 
         todo.save()
         return redirect('/todoapp')
