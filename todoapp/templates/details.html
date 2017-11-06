@@ -1,18 +1,21 @@
 {% include 'partials/header.html' %}
 
-    <a href="/todoapp"> << Back to main list</a>
-
     <h1>{{todo.title}}</h1>
-
-    <p>{{todo.text}}</p>
-
+    <div class="container-fluid">
+        <p>{{todo.text}}</p>
+    </div>
     <br>
 
     Created on {{todo.created_at}}
 
     <hr>
-    <a href="/todoapp/edit/{{todo.id}}">Edit</a>
+    <button type="button" class="btn">
+        <a href="/todoapp/edit/{{todo.id}}">Edit</a>
+    </button>
+    <button type="button" class="btn">
+        <a href="/todoapp/delete/{{todo.id}}">Delete</a>
+    </button>
 
-    <a href="/todoapp/delete/{{todo.id}}">Delete</a>
-
+    <br>
+    <a href="/todoapp"> << Back to main list</a>
 {% include 'partials/footer.html' %}

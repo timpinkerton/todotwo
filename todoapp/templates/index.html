@@ -1,8 +1,23 @@
 {% include 'partials/header.html' %}
-        <ul>
-            {% for todo in todoapp %}
-                <li><a href="/todoapp/details/{{todo.id}}">{{todo.id}} {{todo.title}}</a></li>
-            {% endfor %}
-        </ul>
+
+<div class="container-fluid">
+  
+    <ul class="list-group">
+        {% for todo in todoapp %}
+            <li class="list-group-item"><a href="/todoapp/details/{{todo.id}}">{{todo.title}}</a></li>
+        {% endfor %}
+    </ul>
+
+</div>
+<br>
+<div class="container-fluid">
+    <ul class="list-group"> 
+            
+            <button type="button" class="btn btn-info">
+                <a href="/todoapp/add">Add Todo</a>
+            </button>
+
+    </ul>
+</div>
 
 {% include 'partials/footer.html' %}

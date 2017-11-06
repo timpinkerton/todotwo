@@ -1,3 +1,36 @@
-a {
-    color: rgb(75, 133, 48);
+body {
+    background-color: rgba(105, 142, 167, 0.459);
 }
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    h1 {
+        font-size: 3.2em;
+      }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.6rem;
+      }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3.8rem;
+      }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){
+    h1 {
+        font-size: 4.1rem;
+      }
+ }
