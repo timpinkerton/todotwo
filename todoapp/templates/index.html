@@ -1,5 +1,9 @@
 {% include 'partials/header.html' %}
 
+<nav class="nav justify-content-center">
+    <h6>List View</h6>
+</nav>
+
 <div class="container-fluid">
   
     <ul class="list-group">
@@ -7,17 +11,13 @@
             <li class="list-group-item"><a href="/todoapp/details/{{todo.id}}">{{todo.title}}</a></li>
         {% endfor %}
     </ul>
-
+    <br>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link button add-button" href="/todoapp/add">+ Add a List New Item</a>
+    </nav>
 </div>
-<br>
-<div class="container-fluid">
-    <ul class="list-group"> 
-            
-            <button type="button" class="btn btn-info">
-                <a href="/todoapp/add">Add Todo</a>
-            </button>
 
-    </ul>
-</div>
+
+
 
 {% include 'partials/footer.html' %}

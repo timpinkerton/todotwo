@@ -1,17 +1,28 @@
 {% include 'partials/header.html' %}
 
-<form action="{% url 'add' %}" method="post">
-{% csrf_token %}
-    <label for="title">Title</label><br/>
-    <input type ="text" name="title" id="title" />
-    <br>
-    <label for="text">Text</label><br/>
-    <textarea name="text" id="text"></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Submit"/>
-</form>
+<nav class="nav justify-content-center">
+    <h6>Add View</h6>
+</nav>
 
-<a href="/">Go Back</a>
+<div class="container-fluid">
+
+    <form action="{% url 'add' %}" method="post">
+    {% csrf_token %}
+        <label for="title">Title</label><br/>
+        <input type ="text" name="title" id="title" placeholder="Give this item a title" class="title-input"/>
+        <br>
+        <br>
+        <label for="text">Details</label>
+        <br>
+        <textarea placeholder="Provide some details" name="text" id="text" class="details-input"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Add it!"/>
+        <br>
+        <br>
+        <a class="nav-item nav-link button cxl-button" href="/">Cancel</a>
+    </form>
+
+</div>
 
 {% include 'partials/footer.html' %}

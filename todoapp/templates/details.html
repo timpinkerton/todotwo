@@ -1,21 +1,36 @@
 {% include 'partials/header.html' %}
 
-    <h1>{{todo.title}}</h1>
-    <div class="container-fluid">
-        <p>{{todo.text}}</p>
-    </div>
-    <br>
+<nav class="nav justify-content-center">
+        <h6>Detail View</h6>
+</nav>
 
-    Created on {{todo.created_at}}
+<div class="container-fluid">
 
-    <hr>
-    <button type="button" class="btn">
-        <a href="/todoapp/edit/{{todo.id}}">Edit</a>
-    </button>
-    <button type="button" class="btn">
-        <a href="/todoapp/delete/{{todo.id}}">Delete</a>
-    </button>
+    <form>
+        <label for="title">Title</label>
+        <br/>
+        <h4 class="details-view title-input">{{todo.title}}</h4>
+        <br>
+        <label for="text">Details</label>
+        <br>
+        <p class="details-view details-input">{{todo.text}}</p>
+        
+        <p class="timestamp">Originally created on {{todo.created_at}}</p>
+    </form>
 
-    <br>
-    <a href="/todoapp"> << Back to main list</a>
+</div>
+
+<hr>
+
+<nav class="nav nav-pills nav-justified">
+    <a class="nav-item nav-link button edit-button" href="/todoapp/edit/{{todo.id}}">Edit</a>
+    <a class="nav-item nav-link button delete-button" href="/todoapp/delete/{{todo.id}}">Delete</a>
+</nav>
+
+
+<br>
+<a href="/todoapp"> << Back to List View</a>
+
+
+
 {% include 'partials/footer.html' %}
