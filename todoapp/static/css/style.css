@@ -87,9 +87,19 @@ textarea {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    .wrapper {
+        max-width: 760px;
+    }
+
+
     h1 {
         font-size: 3.6rem;
       }
+
+    body {
+        background: linear-gradient(to right, red,orange,yellow); 
+    }
  }
 
 /* Large devices (desktops, 992px and up) */
