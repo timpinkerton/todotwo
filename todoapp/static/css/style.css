@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(67, 110, 134, 0.459);
+    background: linear-gradient(to right, rgb(16, 130, 252), rgb(47, 180, 180), rgb(16, 130, 252)); 
 }
 
 h1 {
@@ -22,17 +22,25 @@ a {
     border-radius: 4px; 
 }
 
+.button-wrapper {
+    text-align: center;
+}
+
 .button {
     font: 1em Arial;
     color: #ffffff;
     height: 40px;
-    border-radius: 2%; 
-    text-align: center; 
+    border-radius: 2%;
+    padding-top: 20px; 
 }
 
 .add-button {
-    background-color: rgba(14, 119, 0, 0.678);
+    background-color: rgba(13, 95, 0, 0.979);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
+
 
 /***************** DETAILS VIEW *****************/
 
