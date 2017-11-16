@@ -18,16 +18,14 @@
         <p class="timestamp">Originally created on {{todo.created_at}}</p>
     </form>
 
-<hr>
+    <hr>
+        <nav class="nav justify-content-center">
+            <a class="nav-item nav-link button edit-button " href="/todoapp/edit/{{todo.id}}">Edit</a>
+            <a class="nav-item nav-link button delete-button" href="/todoapp/delete/{{todo.id}}">Delete</a>
+        </nav>
 
-<nav class="nav nav-pills nav-justified">
-    <a class="nav-item nav-link button edit-button" href="/todoapp/edit/{{todo.id}}">Edit</a>
-    <a class="nav-item nav-link button delete-button" href="/todoapp/delete/{{todo.id}}">Delete</a>
-</nav>
-
-
-<br>
-<a href="/todoapp"> << Back to List View</a>
+    <br>
+    <a href="/todoapp"> << Back to List View</a>
 
 </div>
 
