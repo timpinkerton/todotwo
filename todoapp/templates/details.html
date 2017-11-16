@@ -19,11 +19,12 @@
     </form>
 
     <hr>
-        <nav class="nav justify-content-center">
-            <a class="nav-item nav-link button edit-button " href="/todoapp/edit/{{todo.id}}">Edit</a>
-            <a class="nav-item nav-link button delete-button" href="/todoapp/delete/{{todo.id}}">Delete</a>
-        </nav>
-
+        <div class="nav justify-content-center">
+            <nav class="nav nav-pills nav-justified">
+                <a class="nav-item nav-link button edit-button" href="/todoapp/edit/{{todo.id}}">EDIT</a>
+                <a class="nav-item nav-link button delete-button" href="/todoapp/delete/{{todo.id}}">DEL</a>
+            </nav>
+        </div>
     <br>
     <a href="/todoapp"> << Back to List View</a>
 

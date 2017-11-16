@@ -1,5 +1,9 @@
 {% include 'partials/header.html' %}
 
+<nav class="nav justify-content-center">
+    <h6>Delete View</h6>
+</nav>
+
 <div class="container-fluid wrapper">
 
     <form action="/todoapp/delete/{{todo.id}}/" method="POST">
@@ -14,7 +18,11 @@
         
         <p class="timestamp">Originally created on {{todo.created_at}}</p>
 
-        <a class="nav-item nav-link button cxl-button" href="/">Cancel</a>
+        <div class="nav justify-content-center">
+            <nav class="nav nav-pills nav-justified">
+                <a class="nav-item nav-link button cxl-button" href="/">CXL</a>
+            </nav>
+        </div>
     </form>
 
 </div>
