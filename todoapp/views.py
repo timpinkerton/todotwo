@@ -16,6 +16,7 @@ def index(request):
     }
     return render(request, 'index.html', context) 
 
+# Details View
 def details(request, id):
             # This will get a Todo object using the id
     todo = Todo.objects.get(id=id)
@@ -25,6 +26,7 @@ def details(request, id):
     }
     return render(request, 'details.html', context) 
 
+# Edit View
 def edit(request, id):
     # This will test if this is a POST request
     if(request.method == "POST"):
@@ -49,6 +51,7 @@ def edit(request, id):
         }
         return render(request, 'edit.html', context)  
 
+# Add View
 def add(request):
     # This will test if this is a POST request
     # When the submit button in add.html is clicked, it creates a POST request
@@ -58,7 +61,6 @@ def add(request):
         title = request.POST["title"]
         text = request.POST["text"]
 
-
         todo = Todo(title=title, text=text)
         todo.save()
 
@@ -66,7 +68,7 @@ def add(request):
     else: 
         return render(request, 'add.html') 
     
-
+# Delete View
 def delete(request, id):
     if(request.method == "POST"):
         todo = Todo.objects.get(id=id)
